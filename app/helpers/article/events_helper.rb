@@ -1,0 +1,2 @@
+module Article::EventsHelper
+end

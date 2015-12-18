@@ -1,0 +1,40 @@
+#tf-header
+  .container
+    / container
+    %h1 スナップ
+  / end container
+/
+  Works Section
+  \==================================================
+
+#tf-works
+  .container
+    .section-header
+      %h2
+        %span.happylight
+          %strong 可愛い
+        はみんなを
+        %span.highlight
+          %strong HAPPY
+        にする
+      %h5
+        %em Cute make everyone happy
+
+    .text-center
+      %ul.list-inline.cat
+        / Portfolio Filter Categories
+        %li
+          = link_to "ALL", article_models_path
+        %li
+          = link_to "愛媛", article_tag_path("愛媛")
+        %li
+          = link_to "高知", article_tag_path("高知")
+        %li
+          = link_to "香川", article_tag_path("香川")
+        %li
+          = link_to "徳島", article_tag_path("徳島")
+      / End Portfolio Filter Categories
+  / End Container
+.container
+  #itemsWorkThree.row.text-center
+    =render @models

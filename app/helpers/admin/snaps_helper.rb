@@ -1,0 +1,2 @@
+module Admin::SnapsHelper
+end

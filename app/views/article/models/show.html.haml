@@ -1,0 +1,170 @@
+%body
+  /
+    Main Navigation
+    \==================================================
+
+  #tf-header
+    .container
+      / container
+      %h1 #{@model.name}@#{@model.college}
+      =link_to "編集", edit_admin_model_path
+
+  /
+    Blog Section
+    \==================================================
+  #tf-blog.blog-post
+
+    #blog-post
+      / fullwidth gray background
+      .container
+        / container
+        .row
+          / row
+          .col-md-6.col-md-offset-1
+            / Left Blogrol col 8
+            .post-wrap
+              / Post Wrapper
+              %p.small January 14, 2015
+              %ul.list-inline.metas.pull-left
+                / post metas
+                %li
+                  %a{:href => "#"} by Rudhi Design
+                / meta author
+              - @model.model_images.sub.each do |snap|
+                = image_tag("#{snap.image.url}", class: 'img-responsive')
+                / %img.img-responsive{:alt => "...", :src => @model.model_images.main.first.image.url}
+              %br/
+              %br/
+              .snap-bottom
+                .snap-tag
+                  %p
+                    %strong Tags:
+                  %ul.list-inline.meta-tags
+                    - @model.tag_list.each do |tag|
+                      %li
+                        = link_to tag, article_tag_path(tag)
+
+                .like-button
+                  = render partial: 'article/likes/like'
+
+          .col-md-4
+            / Blog Sidebar
+            .sidebar
+              .widget.search
+                / Search Widget
+                .input-group
+                  = form_tag(search_article_models_path, method: :get) do
+                    %input.form-control{:name => "keyword", :placeholder => "Search for...", :type => "text"}/
+                    %button.btn.btn-default{:type => "button"}
+                      %span.fa.fa-search 検索
+                / /input-group
+              / end Search Widget
+
+              .widget.archive
+                / Archive Widget
+                %h4.text-uppercase 週間人気記事ランキング
+                %ul.list-unstyled.bullet-lists
+                  %li
+                    %a{:href => "#"}
+                      %span.fa.fa-circle
+                      March 2015
+                  %li
+                    %a{:href => "#"}
+                      %span.fa.fa-circle
+                      February 2015
+                  %li
+                    %a{:href => "#"}
+                      %span.fa.fa-circle
+                      January 2015
+                  %li
+                    %a{:href => "#"}
+                      %span.fa.fa-circle
+                      December 2015
+                  %li
+                    %a{:href => "#"}
+                      %span.fa.fa-circle
+                      November 2015
+                  %li
+                    %a{:href => "#"}
+                      %span.fa.fa-circle
+                      October 2015
+                  %li
+                    %a{:href => "#"}
+                      %span.fa.fa-circle
+                      September 2015
+              .widget.post-tab
+                / Posts Tab Widget
+                %div{:role => "tabpanel"}
+                  / Nav tabs
+                  %ul.nav.nav-tabs{:role => "tablist"}
+                    %li.active{:role => "presentation"}
+                      %a{"aria-controls" => "popular", "data-toggle" => "tab", :href => "#popular", :role => "tab"} 人気記事
+                    / Popular Posts
+                    %li{:role => "presentation"}
+                      %a{"aria-controls" => "recent", "data-toggle" => "tab", :href => "#recent", :role => "tab"} 最新記事
+                    / Recent Posts
+                  .tab-content
+                    #popular.tab-pane.active{:role => "tabpanel"}
+                      / Popular Posts
+                      .list-group
+                        %a.list-group-item{:href => "#"}
+                          %p.small January 27, 2015
+                          %h5.media-heading
+                            %strong Condimentum aliquam, mollit magna velit nec et scelerisque
+                        %a.list-group-item{:href => "#"}
+                          %p.small January 14, 2015
+                          %h5.media-heading
+                            %strong Pellentesque vehicula. Eget sed, dapibus. Vel et scelerisque donec et
+                        %a.list-group-item{:href => "#"}
+                          %p.small Feb 12, 2015
+                          %h5.media-heading
+                            %strong Et scelerisque vestibulum. Condimentum aliquam, mollit magna velit nec
+                        %a.list-group-item{:href => "#"}
+                          %p.small January 14, 2015
+                          %h5.media-heading
+                            %strong Scelerisque vestibulum Condimentum aliquam, mollit magna velit nec
+                        %a.list-group-item{:href => "#"}
+                          %p.small December 19, 2015
+                          %h5.media-heading
+                            %strong Vel donec et scelerisque vestibulum. Condimentum aliquam, mollit magna velit nec
+                    #recent.tab-pane{:role => "tabpanel"}
+                      / Recent Posts
+                      .list-group
+                        %a.list-group-item{:href => "#"}
+                          %p.small January 14, 2015
+                          %h5.media-heading
+                            %strong Vel donec et scelerisque vestibulum. Condimentum aliquam, mollit magna velit nec
+                        %a.list-group-item{:href => "#"}
+                          %p.small January 14, 2015
+                          %h5.media-heading
+                            %strong Vel donec et scelerisque vestibulum. Condimentum aliquam, mollit magna velit nec
+                        %a.list-group-item{:href => "#"}
+                          %p.small January 14, 2015
+                          %h5.media-heading
+                            %strong Vel donec et scelerisque vestibulum. Condimentum aliquam, mollit magna velit nec
+                        %a.list-group-item{:href => "#"}
+                          %p.small January 14, 2015
+                          %h5.media-heading
+                            %strong Vel donec et scelerisque vestibulum. Condimentum aliquam, mollit magna velit nec
+                        %a.list-group-item{:href => "#"}
+                          %p.small January 14, 2015
+                          %h5.media-heading
+                            %strong Vel donec et scelerisque vestibulum. Condimentum aliquam, mollit magna velit nec
+
+              .widget.tags
+                / Tags Widget
+                %h4.text-uppercase Tags
+                %ul.list-inline.bullet-lists
+                  - @tags.each do |tag|
+                    %li
+                      = link_to tag, article_tag_path(tag.name)
+
+
+
+            / end right content col 4
+          / end row
+        / end container
+      / end fullwidth gray background
+    /
+      Footer
+      \==================================================

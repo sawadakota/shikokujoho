@@ -1,0 +1,14 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Shikokujoho
+    = stylesheet_link_tag 'inside/admin', media: 'all'
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+    .admin
+      %header
+        .title
+          = link_to "管理者ページ" , admin_index_path
+      = yield

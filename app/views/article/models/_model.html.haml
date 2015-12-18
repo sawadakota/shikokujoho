@@ -1,0 +1,12 @@
+.col-xs-12.col-sm-6.col-md-3.col-lg-3.brand.others
+  .box
+    .hover-bg
+      =link_to image_tag(model.model_images.main.first.image.url, class: "img-responsive"), article_model_path(model.id)
+
+    %h5
+      .furigana
+        =model.furigana
+      =model.name
+      %br/
+      %small
+        %em #{model.college}

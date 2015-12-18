@@ -1,0 +1,16 @@
+.user-page
+  .user-header
+    %p #{@user.nickname}
+    %p.smole #{@user.nickname}のページです。
+
+    %ul.user-list
+      %li
+        = link_to "アルバム"
+      %li
+        = link_to "推しメン"
+      %li
+        = link_to "お気に入り記事"
+      %li
+        = link_to "まとめ記事"
+
+  .user-content

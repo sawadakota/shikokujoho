@@ -1,0 +1,536 @@
+
+#tf-header-dates
+  .container
+    / container
+    %h1 デート
+    -if user_signed_in?
+      .sign_in-button
+        = link_to "ログアウト", destroy_user_session_path, method: :delete
+      .sign_in-button
+        = link_to "投稿", new_article_date_path
+    -else
+      = link_to "ログイン", new_user_session_path
+  / end container
+/
+  Blog Section
+  \==================================================
+#tf-blog.blog
+  .container
+    / container
+    .section-header
+      %h2
+        %span.pinklight
+        %strong キミ
+        と
+        %strong 今日
+        は
+        %span.pinklight
+          %strong どこに行こうか
+      %h5
+        %em We design and build functional and beautiful websites
+
+  #blog-post
+    / fullwidth gray background
+    .container
+      / container
+      .row
+        / row
+        .col-md-6.col-md-offset-1
+          / Left Blogrol col 8
+          .post-wrap
+            / Post Wrapper
+            .media.post
+              / post wrap
+              .media-left
+                %a{:href => "#"}
+                  / link to your post single page
+                  %img.media-object{:alt => "...", :src => "http://placehold.it/120x150"}/
+                  / Your Post Image
+              .media-body
+                %p.small January 14, 2015
+                %a{:href => "#"}
+                  %h5.media-heading
+                    %strong Vel donec et scelerisque vestibulum. Condimentum aliquam, mollit magna velit nec
+                %p Tempor vestibulum turpis id ligula mi mattis. Eget arcu vitae mauris amet odio. Diam nibh diam, quam elit, libero nostra ut. Pellentesque vehicula. Eget sed, dapibus
+            / end post wrap
+            .post-meta
+              / Meta details
+              %ul.list-inline.metas.pull-left
+                / post metas
+                %li
+                  %a{:href => "#"} by Rudhi Design
+                / meta author
+                %li
+                  %a{:href => "#"} 20 Comments
+                / meta comments
+                %li
+                  %a{:href => "#"} Read More
+                / read more link
+              %ul.list-inline.meta-detail.pull-right
+                / user meta interaction
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-heart
+                  50
+                / like button
+                %li
+                  %i.fa.fa-eye
+                  110
+                / no. of views
+            / end Meta details
+          / end Post Wrapper
+          .post-wrap
+            / Post Wrapper
+            .media.post
+              / post wrap
+              .media-left
+                %a{:href => "#"}
+                  / link to your post single page
+                  %img.media-object{:alt => "...", :src => "http://placehold.it/120x150"}/
+                  / Your Post Image
+              .media-body
+                %p.small January 14, 2015
+                %a{:href => "#"}
+                  %h5.media-heading
+                    %strong Vel donec et scelerisque vestibulum. Condimentum aliquam, mollit magna velit nec
+                %p Tempor vestibulum turpis id ligula mi mattis. Eget arcu vitae mauris amet odio. Diam nibh diam, quam elit, libero nostra ut. Pellentesque vehicula. Eget sed, dapibus
+            / end post wrap
+            .post-meta
+              / Meta details
+              %ul.list-inline.metas.pull-left
+                / post metas
+                %li
+                  %a{:href => "#"} by Rudhi Design
+                / meta author
+                %li
+                  %a{:href => "#"} 20 Comments
+                / meta comments
+                %li
+                  %a{:href => "#"} Read More
+                / read more link
+              %ul.list-inline.meta-detail.pull-right
+                / user meta interaction
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-heart
+                  50
+                / like button
+                %li
+                  %i.fa.fa-eye
+                  110
+                / no. of views
+            / end Meta details
+          / end Post Wrapper
+          .post-wrap
+            / Post Wrapper
+            .media.post
+              / post wrap
+              .media-left
+                %a{:href => "#"}
+                  / link to your post single page
+                  %img.media-object{:alt => "...", :src => "http://placehold.it/120x150"}/
+                  / Your Post Image
+              .media-body
+                %p.small January 14, 2015
+                %a{:href => "#"}
+                  %h5.media-heading
+                    %strong Vel donec et scelerisque vestibulum. Condimentum aliquam, mollit magna velit nec
+                %p Tempor vestibulum turpis id ligula mi mattis. Eget arcu vitae mauris amet odio. Diam nibh diam, quam elit, libero nostra ut. Pellentesque vehicula. Eget sed, dapibus
+            / end post wrap
+            .post-meta
+              / Meta details
+              %ul.list-inline.metas.pull-left
+                / post metas
+                %li
+                  %a{:href => "#"} by Rudhi Design
+                / meta author
+                %li
+                  %a{:href => "#"} 20 Comments
+                / meta comments
+                %li
+                  %a{:href => "#"} Read More
+                / read more link
+              %ul.list-inline.meta-detail.pull-right
+                / user meta interaction
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-heart
+                  50
+                / like button
+                %li
+                  %i.fa.fa-eye
+                  110
+                / no. of views
+            / end Meta details
+          / end Post Wrapper
+          .post-wrap
+            / Post Wrapper
+            .media.post
+              / post wrap
+              .media-left
+                %a{:href => "#"}
+                  / link to your post single page
+                  %img.media-object{:alt => "...", :src => "http://placehold.it/120x150"}/
+                  / Your Post Image
+              .media-body
+                %p.small January 14, 2015
+                %a{:href => "#"}
+                  %h5.media-heading
+                    %strong Vel donec et scelerisque vestibulum. Condimentum aliquam, mollit magna velit nec
+                %p Tempor vestibulum turpis id ligula mi mattis. Eget arcu vitae mauris amet odio. Diam nibh diam, quam elit, libero nostra ut. Pellentesque vehicula. Eget sed, dapibus
+            / end post wrap
+            .post-meta
+              / Meta details
+              %ul.list-inline.metas.pull-left
+                / post metas
+                %li
+                  %a{:href => "#"} by Rudhi Design
+                / meta author
+                %li
+                  %a{:href => "#"} 20 Comments
+                / meta comments
+                %li
+                  %a{:href => "#"} Read More
+                / read more link
+              %ul.list-inline.meta-detail.pull-right
+                / user meta interaction
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-heart
+                  50
+                / like button
+                %li
+                  %i.fa.fa-eye
+                  110
+                / no. of views
+            / end Meta details
+          / end Post Wrapper
+          .post-wrap
+            / Post Wrapper
+            .media.post
+              / post wrap
+              .media-left
+                %a{:href => "#"}
+                  / link to your post single page
+                  %img.media-object{:alt => "...", :src => "http://placehold.it/120x150"}/
+                  / Your Post Image
+              .media-body
+                %p.small January 14, 2015
+                %a{:href => "#"}
+                  %h5.media-heading
+                    %strong Vel donec et scelerisque vestibulum. Condimentum aliquam, mollit magna velit nec
+                %p Tempor vestibulum turpis id ligula mi mattis. Eget arcu vitae mauris amet odio. Diam nibh diam, quam elit, libero nostra ut. Pellentesque vehicula. Eget sed, dapibus
+            / end post wrap
+            .post-meta
+              / Meta details
+              %ul.list-inline.metas.pull-left
+                / post metas
+                %li
+                  %a{:href => "#"} by Rudhi Design
+                / meta author
+                %li
+                  %a{:href => "#"} 20 Comments
+                / meta comments
+                %li
+                  %a{:href => "#"} Read More
+                / read more link
+              %ul.list-inline.meta-detail.pull-right
+                / user meta interaction
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-heart
+                  50
+                / like button
+                %li
+                  %i.fa.fa-eye
+                  110
+                / no. of views
+            / end Meta details
+          / end Post Wrapper
+          .post-wrap
+            / Post Wrapper
+            .media.post
+              / post wrap
+              .media-left
+                %a{:href => "#"}
+                  / link to your post single page
+                  %img.media-object{:alt => "...", :src => "http://placehold.it/120x150"}/
+                  / Your Post Image
+              .media-body
+                %p.small January 14, 2015
+                %a{:href => "#"}
+                  %h5.media-heading
+                    %strong Vel donec et scelerisque vestibulum. Condimentum aliquam, mollit magna velit nec
+                %p Tempor vestibulum turpis id ligula mi mattis. Eget arcu vitae mauris amet odio. Diam nibh diam, quam elit, libero nostra ut. Pellentesque vehicula. Eget sed, dapibus
+            / end post wrap
+            .post-meta
+              / Meta details
+              %ul.list-inline.metas.pull-left
+                / post metas
+                %li
+                  %a{:href => "#"} by Rudhi Design
+                / meta author
+                %li
+                  %a{:href => "#"} 20 Comments
+                / meta comments
+                %li
+                  %a{:href => "#"} Read More
+                / read more link
+              %ul.list-inline.meta-detail.pull-right
+                / user meta interaction
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-heart
+                  50
+                / like button
+                %li
+                  %i.fa.fa-eye
+                  110
+                / no. of views
+            / end Meta details
+          / end Post Wrapper
+          .text-left
+            / Blogrol Pagination
+            %nav
+              %ul.pagination
+                %li
+                  %a{"aria-label" => "Previous", :href => "#"}
+                    %span{"aria-hidden" => "true"} Prev
+                %li
+                  %a.active{:href => "#"} 1
+                %li
+                  %a{:href => "#"} 2
+                %li
+                  %a{:href => "#"} 3
+                %li
+                  %a{:href => "#"} 4
+                %li
+                  %a{"aria-label" => "Next", :href => "#"}
+                    %span{"aria-hidden" => "true"} Next
+        / end Left content col 8
+        .col-md-4
+          / Blog Sidebar
+          .sidebar
+            .widget.search
+              / Search Widget
+              .input-group
+                %input.form-control{:placeholder => "Search for...", :type => "text"}/
+                %span.input-group-btn
+                  %button.btn.btn-default{:type => "button"}
+                    %span.fa.fa-search
+              / /input-group
+            / end Search Widget
+            .widget.categories
+              / Category Widget
+              %h4.text-uppercase Category
+              %ul.list-unstyled.bullet-lists
+                %li
+                  %a{:href => "#"}
+                    %span.fa.fa-circle
+                    Web Design
+                %li
+                  %a{:href => "#"}
+                    %span.fa.fa-circle
+                    WordPress
+                %li
+                  %a{:href => "#"}
+                    %span.fa.fa-circle
+                    Graphics Design
+                %li
+                  %a{:href => "#"}
+                    %span.fa.fa-circle
+                    Branding
+                %li
+                  %a{:href => "#"}
+                    %span.fa.fa-circle
+                    Marketing
+                %li
+                  %a{:href => "#"}
+                    %span.fa.fa-circle
+                    Business
+                %li
+                  %a{:href => "#"}
+                    %span.fa.fa-circle
+                    Outsourcing
+            .widget.archive
+              / Archive Widget
+              %h4.text-uppercase Archives
+              %ul.list-unstyled.bullet-lists
+                %li
+                  %a{:href => "#"}
+                    %span.fa.fa-circle
+                    March 2015
+                %li
+                  %a{:href => "#"}
+                    %span.fa.fa-circle
+                    February 2015
+                %li
+                  %a{:href => "#"}
+                    %span.fa.fa-circle
+                    January 2015
+                %li
+                  %a{:href => "#"}
+                    %span.fa.fa-circle
+                    December 2015
+                %li
+                  %a{:href => "#"}
+                    %span.fa.fa-circle
+                    November 2015
+                %li
+                  %a{:href => "#"}
+                    %span.fa.fa-circle
+                    October 2015
+                %li
+                  %a{:href => "#"}
+                    %span.fa.fa-circle
+                    September 2015
+            .widget.post-tab
+              / Posts Tab Widget
+              %div{:role => "tabpanel"}
+                / Nav tabs
+                %ul.nav.nav-tabs{:role => "tablist"}
+                  %li.active{:role => "presentation"}
+                    %a{"aria-controls" => "popular", "data-toggle" => "tab", :href => "#popular", :role => "tab"} Popular
+                  / Popular Posts
+                  %li{:role => "presentation"}
+                    %a{"aria-controls" => "recent", "data-toggle" => "tab", :href => "#recent", :role => "tab"} Recent
+                  / Recent Posts
+                  %li{:role => "presentation"}
+                    %a{"aria-controls" => "comment", "data-toggle" => "tab", :href => "#comment", :role => "tab"} Comment
+                  / Comments
+                / Tab panes
+                .tab-content
+                  #popular.tab-pane.active{:role => "tabpanel"}
+                    / Popular Posts
+                    .list-group
+                      %a.list-group-item{:href => "#"}
+                        %p.small January 27, 2015
+                        %h5.media-heading
+                          %strong Condimentum aliquam, mollit magna velit nec et scelerisque
+                      %a.list-group-item{:href => "#"}
+                        %p.small January 14, 2015
+                        %h5.media-heading
+                          %strong Pellentesque vehicula. Eget sed, dapibus. Vel et scelerisque donec et
+                      %a.list-group-item{:href => "#"}
+                        %p.small Feb 12, 2015
+                        %h5.media-heading
+                          %strong Et scelerisque vestibulum. Condimentum aliquam, mollit magna velit nec
+                      %a.list-group-item{:href => "#"}
+                        %p.small January 14, 2015
+                        %h5.media-heading
+                          %strong Scelerisque vestibulum Condimentum aliquam, mollit magna velit nec
+                      %a.list-group-item{:href => "#"}
+                        %p.small December 19, 2015
+                        %h5.media-heading
+                          %strong Vel donec et scelerisque vestibulum. Condimentum aliquam, mollit magna velit nec
+                  #recent.tab-pane{:role => "tabpanel"}
+                    / Recent Posts
+                    .list-group
+                      %a.list-group-item{:href => "#"}
+                        %p.small January 14, 2015
+                        %h5.media-heading
+                          %strong Vel donec et scelerisque vestibulum. Condimentum aliquam, mollit magna velit nec
+                      %a.list-group-item{:href => "#"}
+                        %p.small January 14, 2015
+                        %h5.media-heading
+                          %strong Vel donec et scelerisque vestibulum. Condimentum aliquam, mollit magna velit nec
+                      %a.list-group-item{:href => "#"}
+                        %p.small January 14, 2015
+                        %h5.media-heading
+                          %strong Vel donec et scelerisque vestibulum. Condimentum aliquam, mollit magna velit nec
+                      %a.list-group-item{:href => "#"}
+                        %p.small January 14, 2015
+                        %h5.media-heading
+                          %strong Vel donec et scelerisque vestibulum. Condimentum aliquam, mollit magna velit nec
+                      %a.list-group-item{:href => "#"}
+                        %p.small January 14, 2015
+                        %h5.media-heading
+                          %strong Vel donec et scelerisque vestibulum. Condimentum aliquam, mollit magna velit nec
+                  #comment.tab-pane{:role => "tabpanel"}
+                    / Comments
+                    .list-group
+                      %a.list-group-item{:href => "#"}
+                        %p.small
+                          Ms. Lijoy
+                          %strong Comments
+                          on:
+                        %h5.media-heading
+                          %strong Vel donec et scelerisque vestibulum. Condimentum aliquam, mollit magna velit nec
+                      %a.list-group-item{:href => "#"}
+                        %p.small
+                          Coder Expert
+                          %strong Comments
+                          on:
+                        %h5.media-heading
+                          %strong Pellentesque vehicula. Eget sed, dapibus. Vel et scelerisque donec et
+                      %a.list-group-item{:href => "#"}
+                        %p.small
+                          Cool Design
+                          %strong Comments
+                          on:
+                        %h5.media-heading
+                          %strong Et scelerisque vestibulum. Condimentum aliquam, mollit magna velit nec
+                      %a.list-group-item{:href => "#"}
+                        %p.small
+                          Mark Szuckerburg
+                          %strong Comments
+                          on:
+                        %h5.media-heading
+                          %strong Scelerisque vestibulum Condimentum aliquam, mollit magna velit nec
+                      %a.list-group-item{:href => "#"}
+                        %p.small
+                          Ruji
+                          %strong Comments
+                          on:
+                        %h5.media-heading
+                          %strong Vel donec et scelerisque vestibulum. Condimentum aliquam, mollit magna velit nec
+            .widget.tags
+              / Tags Widget
+              %h4.text-uppercase Tags
+              %ul.list-inline.bullet-lists
+                %li
+                  %a{:href => "#"} web design
+                %li
+                  %a{:href => "#"} business
+                %li
+                  %a{:href => "#"} psd design
+                %li
+                  %a{:href => "#"} themeforest
+                %li
+                  %a{:href => "#"} wordpress
+                %li
+                  %a{:href => "#"} responsive
+                %li
+                  %a{:href => "#"} bootstrap
+        / end right content col 4
+    / end container
+  / end fullwidth gray background
+/
+  Footer
+  \==================================================
+
+/ jQuery (necessary for Bootstrap's JavaScript plugins)
+%script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"}
+%script{:src => "js/jquery.1.11.1.js", :type => "text/javascript"}
+/ Include all compiled plugins (below), or include individual files as needed
+%script{:src => "js/bootstrap.js", :type => "text/javascript"}
+%script{:src => "js/owl.carousel.js", :type => "text/javascript"}
+/ Owl Carousel Plugin
+%script{:src => "js/SmoothScroll.js", :type => "text/javascript"}
+/ Google Map
+%script{:src => "https://maps.googleapis.com/maps/api/js?key=AIzaSyASm3CwaK9qtcZEWYa-iQwHaGi3gcosAJc&sensor=false", :type => "text/javascript"}
+%script{:src => "js/map.js", :type => "text/javascript"}
+/ Parallax Effects
+%script{:src => "js/skrollr.js", :type => "text/javascript"}
+%script{:src => "js/imagesloaded.js", :type => "text/javascript"}
+/ Portfolio Filter
+%script{:src => "js/jquery.isotope.js", :type => "text/javascript"}
+/ LightBox Nivo
+%script{:src => "js/nivo-lightbox.min.js", :type => "text/javascript"}
+/ Contact page
+%script{:src => "js/jqBootstrapValidation.js", :type => "text/javascript"}
+%script{:src => "js/contact.js", :type => "text/javascript"}
+/
+  Javascripts
+  \==================================================
+%script{:src => "js/main.js", :type => "text/javascript"}

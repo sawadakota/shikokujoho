@@ -1,0 +1,236 @@
+.form
+  = form_for ([:admin, @model]) do |f|
+    .col-md-8.col-md-offset-2
+      .col-md-12
+        = f.text_field :name, placeholder: :"名前"
+    .row
+      .col-md-12
+        .cover-image-upload#preview
+          = f.fields_for :model_images do |i|
+            = i.file_field :image
+            = i.hidden_field :status, value: 'main'
+
+      .col-md-12
+        %li.list-group-item.col-md-4
+          = f.fields_for :model_images, @model.model_images.sub do |i|
+            .image-upload#sub1_preview
+              = i.file_field :image
+              = i.hidden_field :status, value: 'sub'
+
+          %li.list-group-item.col-md-4
+            = f.fields_for :model_images, @model.model_images.sub do |i|
+              .image-upload#sub2_preview
+                = i.file_field :image
+                = i.hidden_field :status, value: 'sub'
+
+          %li.list-group-item.col-md-4
+            = f.fields_for :model_images, @model.model_images.sub do |i|
+              .image-upload#sub2_preview
+                = i.file_field :image
+                = i.hidden_field :status, value: 'sub'
+
+          %li.list-group-item.col-md-4
+            = f.fields_for :model_images, @model.model_images.sub do |i|
+              .image-upload#sub2_preview
+                = i.file_field :image
+                = i.hidden_field :status, value: 'sub'
+
+          %li.list-group-item.col-md-4
+            = f.fields_for :model_images, @model.model_images.sub do |i|
+              .image-upload#sub2_preview
+                = i.file_field :image
+                = i.hidden_field :status, value: 'sub'
+
+          %li.list-group-item.col-md-4
+            = f.fields_for :model_images, @model.model_images.sub do |i|
+              .image-upload#sub2_preview
+                = i.file_field :image
+                = i.hidden_field :status, value: 'sub'
+
+          %li.list-group-item.col-md-4
+            = f.fields_for :model_images, @model.model_images.sub do |i|
+              .image-upload#sub2_preview
+                = i.file_field :image
+                = i.hidden_field :status, value: 'sub'
+
+          %li.list-group-item.col-md-4
+            = f.fields_for :model_images, @model.model_images.sub do |i|
+              .image-upload#sub2_preview
+                = i.file_field :image
+                = i.hidden_field :status, value: 'sub'
+
+          %li.list-group-item.col-md-4
+            = f.fields_for :model_images, @model.model_images.sub do |i|
+              .image-upload#sub2_preview
+                = i.file_field :image
+                = i.hidden_field :status, value: 'sub'
+
+          %li.list-group-item.col-md-4
+            = f.fields_for :model_images, @model.model_images.sub do |i|
+              .image-upload#sub2_preview
+                = i.file_field :image
+                = i.hidden_field :status, value: 'sub'
+
+          %li.list-group-item.col-md-4
+            = f.fields_for :model_images, @model.model_images.sub do |i|
+              .image-upload#sub2_preview
+                = i.file_field :image
+                = i.hidden_field :status, value: 'sub'
+
+          %li.list-group-item.col-md-4
+            = f.fields_for :model_images, @model.model_images.sub do |i|
+              .image-upload#sub2_preview
+                = i.file_field :image
+                = i.hidden_field :status, value: 'sub'
+
+          %li.list-group-item.col-md-4
+            = f.fields_for :model_images, @model.model_images.sub do |i|
+              .image-upload#sub2_preview
+                = i.file_field :image
+                = i.hidden_field :status, value: 'sub'
+
+          %li.list-group-item.col-md-4
+            = f.fields_for :model_images, @model.model_images.sub do |i|
+              .image-upload#sub2_preview
+                = i.file_field :image
+                = i.hidden_field :status, value: 'sub'
+
+          %li.list-group-item.col-md-4
+            = f.fields_for :model_images, @model.model_images.sub do |i|
+              .image-upload#sub2_preview
+                = i.file_field :image
+                = i.hidden_field :status, value: 'sub'
+
+          %li.list-group-item.col-md-4
+            = f.fields_for :model_images, @model.model_images.sub do |i|
+              .image-upload#sub2_preview
+                = i.file_field :image
+                = i.hidden_field :status, value: 'sub'
+
+          %li.list-group-item.col-md-4
+            = f.fields_for :model_images, @model.model_images.sub do |i|
+              .image-upload#sub2_preview
+                = i.file_field :image
+                = i.hidden_field :status, value: 'sub'
+
+          %li.list-group-item.col-md-4
+            = f.fields_for :model_images, @model.model_images.sub do |i|
+              .image-upload#sub2_preview
+                = i.file_field :image
+                = i.hidden_field :status, value: 'sub'
+
+          %li.list-group-item.col-md-4
+            = f.fields_for :model_images, @model.model_images.sub do |i|
+              .image-upload#sub2_preview
+                = i.file_field :image
+                = i.hidden_field :status, value: 'sub'
+
+          %li.list-group-item.col-md-4
+            = f.fields_for :model_images, @model.model_images.sub do |i|
+              .image-upload#sub2_preview
+                = i.file_field :image
+                = i.hidden_field :status, value: 'sub'
+
+          %li.list-group-item.col-md-4
+            = f.fields_for :model_images, @model.model_images.sub do |i|
+              .image-upload#sub2_preview
+                = i.file_field :image
+                = i.hidden_field :status, value: 'sub'
+
+          %li.list-group-item.col-md-4
+            = f.fields_for :model_images, @model.model_images.sub do |i|
+              .image-upload#sub2_preview
+                = i.file_field :image
+                = i.hidden_field :status, value: 'sub'
+
+          %li.list-group-item.col-md-4
+            = f.fields_for :model_images, @model.model_images.sub do |i|
+              .image-upload#sub2_preview
+                = i.file_field :image
+                = i.hidden_field :status, value: 'sub'
+
+          %li.list-group-item.col-md-4
+            = f.fields_for :model_images, @model.model_images.sub do |i|
+              .image-upload#sub2_preview
+                = i.file_field :image
+                = i.hidden_field :status, value: 'sub'
+
+          %li.list-group-item.col-md-4
+            = f.fields_for :model_images, @model.model_images.sub do |i|
+              .image-upload#sub2_preview
+                = i.file_field :image
+                = i.hidden_field :status, value: 'sub'
+
+          %li.list-group-item.col-md-4
+            = f.fields_for :model_images, @model.model_images.sub do |i|
+              .image-upload#sub2_preview
+                = i.file_field :image
+                = i.hidden_field :status, value: 'sub'
+
+          %li.list-group-item.col-md-4
+            = f.fields_for :model_images, @model.model_images.sub do |i|
+              .image-upload#sub2_preview
+                = i.file_field :image
+                = i.hidden_field :status, value: 'sub'
+
+          %li.list-group-item.col-md-4
+            = f.fields_for :model_images, @model.model_images.sub do |i|
+              .image-upload#sub2_preview
+                = i.file_field :image
+                = i.hidden_field :status, value: 'sub'
+
+          %li.list-group-item.col-md-4
+            = f.fields_for :model_images, @model.model_images.sub do |i|
+              .image-upload#sub2_preview
+                = i.file_field :image
+                = i.hidden_field :status, value: 'sub'
+
+          %li.list-group-item.col-md-4
+            = f.fields_for :model_images, @model.model_images.sub do |i|
+              .image-upload#sub2_preview
+                = i.file_field :image
+                = i.hidden_field :status, value: 'sub'
+
+          %li.list-group-item.col-md-4
+            = f.fields_for :model_images, @model.model_images.sub do |i|
+              .image-upload#sub2_preview
+                = i.file_field :image
+                = i.hidden_field :status, value: 'sub'
+
+        .row.proto-description
+          .col-md-12
+            =f.text_field :profile, placeholder: :"プロフィール"
+
+        .row.proto-description
+          .col-md-12
+            =f.text_field :college, placeholder: :"学校"
+          .col-md-12
+            %h4 Tag List
+            .row
+              .col-md-3
+                = text_field_tag 'tag_list[]', "", placeholder: "Web"
+              .col-md-3
+                = text_field_tag 'tag_list[]', "", placeholder: "UI"
+              .col-md-3
+                = text_field_tag 'tag_list[]', "", placeholder: "Design"
+              .col-md-3
+                = text_field_tag 'tag_list[]', "", placeholder: "Design"
+              .col-md-3
+                = text_field_tag 'tag_list[]', "", placeholder: "Design"
+              .col-md-3
+                = text_field_tag 'tag_list[]', "", placeholder: "Design"
+              .col-md-3
+                = text_field_tag 'tag_list[]', "", placeholder: "Design"
+              .col-md-3
+                = text_field_tag 'tag_list[]', "", placeholder: "Design"
+              .col-md-3
+                = text_field_tag 'tag_list[]', "", placeholder: "Design"
+              .col-md-3
+                = text_field_tag 'tag_list[]', "", placeholder: "Design"
+              .col-md-3
+                = text_field_tag 'tag_list[]', "", placeholder: "Design"
+              .col-md-3
+                = text_field_tag 'tag_list[]', "", placeholder: "Design"
+
+    .row.text-center.proto-btn
+      = f.submit "PUBLISH"

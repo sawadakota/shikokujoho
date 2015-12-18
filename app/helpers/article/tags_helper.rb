@@ -1,0 +1,2 @@
+module Article::TagsHelper
+end
