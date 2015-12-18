@@ -1242,3 +1242,11 @@ button.btn.btn-default {
     display: block;
     clear: both;
 }
+
+.user-content img {
+    width: 300px;
+}
+
+.user-content li {
+    list-style: none;
+}
