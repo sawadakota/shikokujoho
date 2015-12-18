@@ -2,17 +2,20 @@
 
   - if like_user.exists?(model_id: @model.id)
     %button#like-button.btn.btn-default.decrement
-      = link_to image_tag("icom_heart_red.svg"), article_model_like_path([@model.id, @like.id]), method: :delete, remote: true
-      like
+      = link_to image_tag("icom_heart_red.svg"), article_model_like_path(@like.id, @model.id), method: :delete, remote: true
+      %p Like
       %span#like-sum
+        = likes_counter(@likes)
   - else
     %button#like-button.btn.btn-default.decrement
       = link_to image_tag("icon_heart.svg"), article_model_likes_path(model_id: @model.id), method: :post, remote: true
       %p Like
       %span#like-sum
+        = likes_counter(@likes)
 
 -else
   %button#like-button.btn.btn-default.decrement
     = link_to image_tag("icon_heart.svg"), article_model_likes_path(model_id: @model.id), method: :post, remote: true
     %p Like
     %span#like-sum
+      = likes_counter(@likes)
