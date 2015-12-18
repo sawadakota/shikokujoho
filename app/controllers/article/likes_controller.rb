@@ -4,6 +4,7 @@ class Article::LikesController < ApplicationController
     # Like.create(user_id: current_user.id, model_id: params[:model_id])
     @likes = Like.where(model_id: params[:model_id])
     @like = current_user.likes.create(model_id: params[:model_id])
+    render layout: false
   end
 
   def destroy
@@ -11,5 +12,6 @@ class Article::LikesController < ApplicationController
     @like = current_user.likes.find_by(model_id: params[:id])
     @likes = Like.where(model_id: params[:id])
     @like.destroy
+    render layout: false
   end
 end

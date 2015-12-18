@@ -6,6 +6,8 @@ class Article::ModelsController < ApplicationController
   def show
     @model = Model.find(params[:id])
     @tags = ActsAsTaggableOn::Tag.most_used(20)
+    @like = Like.find_by(user_id: current_user.id)
+    @likes = Like.where(model_id: params[:id])
   end
 
   def search
