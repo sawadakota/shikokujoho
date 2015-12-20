@@ -27,8 +27,6 @@
       %ul.list-inline.cat
         / Portfolio Filter Categories
         %li
-          = link_to "ALL", article_models_path
-        %li
           = link_to "愛媛(#{@ehime_models.count})", article_tag_path("愛媛県")
         %li
           = link_to "高知(#{@kochi_models.count})", article_tag_path("高知県")

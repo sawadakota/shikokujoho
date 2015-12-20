@@ -6,6 +6,7 @@ class Admin::ModelsController < ApplicationController
   end
 
   def create
+    binding.pry
     Model.create(create_params)
   end
 
