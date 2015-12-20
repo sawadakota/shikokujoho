@@ -1353,3 +1353,16 @@ table.brwsr2 td.bar {
     width: 100%;
     /*border-top: solid 1px #34495e;*/
 }
+
+/*logo*/
+.navbar-brand img {
+    width: 45px;
+    height: 45px;
+    float: left;
+}
+
+.navbar-brand p {
+    margin-top: 10px;
+    float: left;
+    font-size: 16px;
+}
