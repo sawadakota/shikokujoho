@@ -22,23 +22,13 @@
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
           %ul.nav.navbar-nav.navbar-right
             %li
-              =link_to "ホーム", class: "scroll"
-            %li
-              =link_to "デート", article_dates_path, class: "scroll"
-            %li
-              =link_to "ファッション", article_fashions_path, class: "scroll"
-            %li
-              =link_to "グルメ", article_gourmets_path, class: "scroll"
-            %li
-              =link_to "旅行", article_travels_path, class: "scroll"
+              =link_to "ホーム", root_path, class: "scroll"
             %li
               =link_to "スナップ", article_models_path, class: "scroll"
-            %li
-              =link_to "イベント", class: "scroll"
 
             -if user_signed_in?
               %li
-                = link_to "サインアウト", destroy_user_session_path, method: :delete
+                = link_to "ログアウト", destroy_user_session_path, method: :delete
               %li
                 =link_to "マイページ", user_path(current_user.id)
             -else

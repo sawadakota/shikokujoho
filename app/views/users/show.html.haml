@@ -1,23 +1,28 @@
-.user-page
-  .user-header
+.col-xs-12.col-sm-12.col-md-12.col-lg-12.user-page
+  .col-xs-12.col-sm-12.col-md-12.col-lg-12.user-header
     %p #{@user.nickname}
-    %p.smole #{@user.nickname}のページです。
+    %p.smole #{@user.nickname}さんが好みのモデル一覧
 
-    %ul.user-list
-      %li
-        = link_to "アルバム"
-      %li
-        = link_to "推しメン"
-      %li
-        = link_to "お気に入り記事"
-      %li
-        = link_to "まとめ記事"
 
-  .user-content
-    %ul
-      -@likes.each do |like|
-        %li
-          = link_to image_tag(like.model.model_images.main.first.image.url), article_model_path(like.model.id)
-          #{like.model.furigana}
-          #{like.model.name}
-          #{like.model.college}
+  .col-xs-12.col-sm-12.col-md-12.col-lg-12.user-contents
+    %ul.col-xs-12.col-sm-12.col-md-12.col-lg-12
+      - @likes.each do |like|
+        .col-xs-12.col-sm-6.col-md-3.col-lg-3.brand.others
+          .box
+            .hover-bg
+              = link_to image_tag(like.model.model_images.main.first.image.url), article_model_path(like.model.id)
+
+            %h5
+              .furigana
+                = like.model.furigana
+              = like.model.name
+              %br/
+              %small
+                %em #{like.model.college}
+          / .col-xs-6.col-sm-6.col-md-6.col-lg-6.model-text
+          /   %span.smol
+          /     #{like.model.furigana}
+          /   %br
+          /   #{like.model.name}
+          /   %br
+          /   #{like.model.college}

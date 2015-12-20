@@ -7,7 +7,6 @@
     .container
       / container
       %h1 #{@model.name}@#{@model.college}
-      =link_to "編集", edit_admin_model_path
 
   /
     Blog Section
@@ -27,9 +26,12 @@
               %p.small January 14, 2015
               %ul.list-inline.metas.pull-left
                 / post metas
-                %li
-                  %a{:href => "#"} by Rudhi Design
-                / meta author
+
+                %h3 #{@model.name}@#{@model.college}
+                .like-button#likes
+                  = render partial: 'article/likes/like'
+
+              = image_tag("#{@model.model_images.main.first.image.url}", class: 'img-responsive')
               - @model.model_images.sub.each do |snap|
                 = image_tag("#{snap.image.url}", class: 'img-responsive')
                 / %img.img-responsive{:alt => "...", :src => @model.model_images.main.first.image.url}
@@ -44,8 +46,6 @@
                       %li
                         = link_to tag, article_tag_path(tag)
 
-                .like-button#likes
-                  = render partial: 'article/likes/like'
 
           .col-md-4
             / Blog Sidebar
@@ -107,50 +107,22 @@
                     #popular.tab-pane.active{:role => "tabpanel"}
                       / Popular Posts
                       .list-group
-                        %a.list-group-item{:href => "#"}
-                          %p.small January 27, 2015
-                          %h5.media-heading
-                            %strong Condimentum aliquam, mollit magna velit nec et scelerisque
-                        %a.list-group-item{:href => "#"}
-                          %p.small January 14, 2015
-                          %h5.media-heading
-                            %strong Pellentesque vehicula. Eget sed, dapibus. Vel et scelerisque donec et
-                        %a.list-group-item{:href => "#"}
-                          %p.small Feb 12, 2015
-                          %h5.media-heading
-                            %strong Et scelerisque vestibulum. Condimentum aliquam, mollit magna velit nec
-                        %a.list-group-item{:href => "#"}
-                          %p.small January 14, 2015
-                          %h5.media-heading
-                            %strong Scelerisque vestibulum Condimentum aliquam, mollit magna velit nec
-                        %a.list-group-item{:href => "#"}
-                          %p.small December 19, 2015
-                          %h5.media-heading
-                            %strong Vel donec et scelerisque vestibulum. Condimentum aliquam, mollit magna velit nec
+                        - @ranking.each do |model|
+                          %a.list-group-item{:href => article_model_path(model.id)}
+                            = image_tag(model.model_images.main.first.image.url)
+                            %p.small #{model.created_at}
+                            %h5.media-heading
+                              %strong #{model.name}@#{model.college}
+
                     #recent.tab-pane{:role => "tabpanel"}
                       / Recent Posts
                       .list-group
-                        %a.list-group-item{:href => "#"}
-                          %p.small January 14, 2015
-                          %h5.media-heading
-                            %strong Vel donec et scelerisque vestibulum. Condimentum aliquam, mollit magna velit nec
-                        %a.list-group-item{:href => "#"}
-                          %p.small January 14, 2015
-                          %h5.media-heading
-                            %strong Vel donec et scelerisque vestibulum. Condimentum aliquam, mollit magna velit nec
-                        %a.list-group-item{:href => "#"}
-                          %p.small January 14, 2015
-                          %h5.media-heading
-                            %strong Vel donec et scelerisque vestibulum. Condimentum aliquam, mollit magna velit nec
-                        %a.list-group-item{:href => "#"}
-                          %p.small January 14, 2015
-                          %h5.media-heading
-                            %strong Vel donec et scelerisque vestibulum. Condimentum aliquam, mollit magna velit nec
-                        %a.list-group-item{:href => "#"}
-                          %p.small January 14, 2015
-                          %h5.media-heading
-                            %strong Vel donec et scelerisque vestibulum. Condimentum aliquam, mollit magna velit nec
-
+                        - @newest.each do |new_model|
+                          %a.list-group-item{:href => "#"}
+                            = image_tag(new_model.model_images.main.first.image.url)
+                            %p.small #{new_model.created_at}
+                            %h5.media-heading
+                              %strong #{new_model.name}@#{new_model.college}
               .widget.tags
                 / Tags Widget
                 %h4.text-uppercase Tags
