@@ -3,10 +3,30 @@
     .col-md-8.col-md-offset-2
       .col-md-12
         = f.text_field :name, placeholder: :"名前"
-
     .col-md-8.col-md-offset-2
       .col-md-12
         = f.text_field :furigana, placeholder: :"Furi Gana"
+    .row.proto-description
+      .col-md-12
+        =f.text_field :college, placeholder: :"学校"
+    .col-md-8.col-md-offset-2
+      .col-md-12
+        = f.text_field :birthday, placeholder: :"生年月日"
+    .col-md-8.col-md-offset-2
+      .col-md-12
+        = f.text_field :college2, placeholder: :"大学名・学部名・学年"
+    .col-md-8.col-md-offset-2
+      .col-md-12
+        = f.text_field :highschool, placeholder: :"出身高校"
+    .col-md-8.col-md-offset-2
+      .col-md-12
+        = f.text_field :charmpoint, placeholder: :"チャームポイント"
+    .col-md-8.col-md-offset-2
+      .col-md-12
+        = f.text_field :lovetype, placeholder: :"好きな異性のタイプ"
+    .col-md-8.col-md-offset-2
+      .col-md-12
+        = f.text_field :personality, placeholder: :"性格"
     .row
       .col-md-12
         .cover-image-upload#preview
@@ -166,13 +186,36 @@
                 = i.file_field :image
                 = i.hidden_field :status, value: 'sub'
 
-        .row.proto-description
-          .col-md-12
-            =f.text_field :profile, placeholder: :"プロフィール"
+          %li.list-group-item.col-md-4
+            = f.fields_for :model_images do |i|
+              .image-upload#sub2_preview
+                = i.file_field :image
+                = i.hidden_field :status, value: 'sub'
 
-        .row.proto-description
-          .col-md-12
-            =f.text_field :college, placeholder: :"学校"
+          %li.list-group-item.col-md-4
+            = f.fields_for :model_images do |i|
+              .image-upload#sub2_preview
+                = i.file_field :image
+                = i.hidden_field :status, value: 'sub'
+
+          %li.list-group-item.col-md-4
+            = f.fields_for :model_images do |i|
+              .image-upload#sub2_preview
+                = i.file_field :image
+                = i.hidden_field :status, value: 'sub'
+
+          %li.list-group-item.col-md-4
+            = f.fields_for :model_images do |i|
+              .image-upload#sub2_preview
+                = i.file_field :image
+                = i.hidden_field :status, value: 'sub'
+
+          %li.list-group-item.col-md-4
+            = f.fields_for :model_images do |i|
+              .image-upload#sub2_preview
+                = i.file_field :image
+                = i.hidden_field :status, value: 'sub'
+
           .col-md-12
             %h4 Tag List
             .row
