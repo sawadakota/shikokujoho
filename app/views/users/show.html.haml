@@ -14,3 +14,10 @@
         = link_to "まとめ記事"
 
   .user-content
+    %ul
+      -@likes.each do |like|
+        %li
+          = link_to image_tag(like.model.model_images.main.first.image.url), article_model_path(like.model.id)
+          #{like.model.furigana}
+          #{like.model.name}
+          #{like.model.college}
