@@ -32,6 +32,50 @@
                   = render partial: 'article/likes/like'
 
               = image_tag("#{@model.model_images.main.first.image.url}", class: 'img-responsive')
+              %table.brwsr2
+                %tbody
+                  %tr
+                    %td.bar{:colspan => "6"}
+                  %tr
+                    %th 名前
+                    %td.data.fst
+                      #{@model.name}
+                  %tr
+                    %td.bar{:colspan => "6"}
+                  %tr
+                    %th 生年月日
+                    %td.data.fst
+                      #{@model.birthday}
+                  %tr
+                    %td.bar{:colspan => "6"}
+                  %tr
+                    %th 所属
+                    %td.data.fst
+                      #{@model.college2}
+                  %tr
+                    %td.bar{:colspan => "6"}
+                  %tr
+                    %th 出身高校
+                    %td.data.fst
+                      #{@model.highschool}
+                  %tr
+                    %td.bar{:colspan => "6"}
+                  %tr
+                    %th チャームポイント
+                    %td.data.fst
+                      #{@model.charmpoint}
+                  %tr
+                    %td.bar{:colspan => "6"}
+                  %tr
+                    %th 好きな異性のタイプ
+                    %td.data.fst
+                      #{@model.lovetype}
+                  %tr
+                    %td.bar{:colspan => "6"}
+                  %tr
+                    %th 性格を一言で表すと
+                    %td.data.fst
+                      #{@model.personality}
               - @model.model_images.sub.each do |snap|
                 = image_tag("#{snap.image.url}", class: 'img-responsive')
                 / %img.img-responsive{:alt => "...", :src => @model.model_images.main.first.image.url}
