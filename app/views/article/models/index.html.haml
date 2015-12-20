@@ -29,15 +29,15 @@
         %ul.list-inline.cat
           / Portfolio Filter Categories
           %li
-            = link_to "ALL", article_models_path
+            = link_to "ALL(#{@models.count})", article_models_path
           %li
-            = link_to "愛媛", article_tag_path("愛媛県")
+            = link_to "愛媛(#{@ehime_models.count})", article_tag_path("愛媛県")
           %li
-            = link_to "高知", article_tag_path("高知県")
+            = link_to "高知(#{@kochi_models.count})", article_tag_path("高知県")
           %li
-            = link_to "香川", article_tag_path("香川県")
+            = link_to "香川(#{@kagawa_models.count})", article_tag_path("香川県")
           %li
-            = link_to "徳島", article_tag_path("徳島県")
+            = link_to "徳島(#{@tokushima_models.count})", article_tag_path("徳島県")
         / End Portfolio Filter Categories
     / End Container
     .container
