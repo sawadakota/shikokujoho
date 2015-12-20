@@ -1,7 +1,11 @@
 #tf-header
   .container
     / container
-    %h1 #{@tag}
+    %h1.col-xs-6.col-sm-6.col-md-6.col-lg-6 #{@tag}
+    .col-xs-6.col-sm-6.col-md-6.col-lg-6.header-heart
+      %h3 #{@sum}
+      = image_tag("icom_heart_red.svg")
+      %h3 お気に入り
   / end container
 /
   Works Section
@@ -10,7 +14,7 @@
   .container
     .section-header
       %h2
-        %span.happylight
+        %span.pinklight
           %strong 可愛い
         はみんなを
         %span.highlight
@@ -25,13 +29,13 @@
         %li
           = link_to "ALL", article_models_path
         %li
-          = link_to "愛媛", article_tag_path("愛媛県")
+          = link_to "愛媛(#{@ehime_models.count})", article_tag_path("愛媛県")
         %li
-          = link_to "高知", article_tag_path("高知県")
+          = link_to "高知(#{@kochi_models.count})", article_tag_path("高知県")
         %li
-          = link_to "香川", article_tag_path("香川県")
+          = link_to "香川(#{@kagawa_models.count})", article_tag_path("香川県")
         %li
-          = link_to "徳島", article_tag_path("徳島県")
+          = link_to "徳島(#{@tokushima_models.count})", article_tag_path("徳島県")
       / End Portfolio Filter Categories
     / End Container
   .container
