@@ -16,7 +16,7 @@
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
-          %a.navbar-brand{:href => "#"}
+          %a.navbar-brand{:href => root_path}
             = image_tag("shikoku.jpg")
             %p Shikoku Colors
         / Collect the nav links, forms, and other content for toggling
@@ -28,8 +28,6 @@
               =link_to "スナップ", article_models_path, class: "scroll"
 
             -if user_signed_in?
-              %li
-                = link_to "ログアウト", destroy_user_session_path, method: :delete
               %li
                 =link_to "マイページ", user_path(current_user.id)
             -else
