@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151220055844) do
+ActiveRecord::Schema.define(version: 20151220052017) do
 
   create_table "ckeditor_assets", force: :cascade do |t|
     t.string   "data_file_name",    limit: 255, null: false
@@ -61,6 +61,7 @@ ActiveRecord::Schema.define(version: 20151220055844) do
     t.integer  "likes_count", limit: 4
     t.string   "birthday",    limit: 255
     t.string   "college2",    limit: 255
+    t.string   "birth_day",   limit: 255
     t.string   "lovetype",    limit: 255
     t.string   "highschool",  limit: 255
     t.string   "charmpoint",  limit: 255
